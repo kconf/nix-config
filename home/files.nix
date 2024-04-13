@@ -1,0 +1,8 @@
+{
+  ...
+}:
+{
+  programs.sftpman = {
+    enable = true;
+  };
+}

@@ -39,13 +39,14 @@
         github = "hanjianwei";
         email = "hanjianwei@gmail.com";
       };
+      system = "x86_64-linux";
       mkSystem =
         {
           host,
           dpi ? 96,
         }:
         nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          system = system;
 
           specialArgs = {
             inherit user;
@@ -77,6 +78,6 @@
         };
       };
 
-      formatter."x86_64-linux" = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.${system} = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
 }

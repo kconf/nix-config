@@ -8,6 +8,7 @@
     quarto
     vscode
     wpsoffice-cn
+    zeal
     zotero
     config.nur.repos.xddxdd.dingtalk
     config.nur.repos.linyinfeng.wemeet

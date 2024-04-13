@@ -1,13 +1,15 @@
 { pkgs, user, ... }:
 {
   imports = [
-    ./fonts.nix
-    ./ime.nix
-    ./display.nix
-    ./i3.nix
     ./apps.nix
-    ./zsh.nix
+    ./dev.nix
+    ./display.nix
+    ./files.nix
+    ./fonts.nix
     ./git.nix
+    ./i3.nix
+    ./ime.nix
+    ./zsh.nix
   ];
 
   home = {
