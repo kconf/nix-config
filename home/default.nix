@@ -19,6 +19,8 @@
 
   home.packages = with pkgs; [
     nixfmt-rfc-style
+    gnumake
+    gcc # required by nvim-treesitter
 
     file
     trash-cli
@@ -36,9 +38,6 @@
   # neovim
   programs.neovim = {
     enable = true;
-    extraPackages = with pkgs; [
-      gcc # required by nvim-treesitter
-    ];
   };
   xdg.configFile."nvim" = {
     source =
