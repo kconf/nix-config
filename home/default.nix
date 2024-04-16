@@ -4,7 +4,6 @@
     ./apps.nix
     ./dev.nix
     ./display.nix
-    ./files.nix
     ./fonts.nix
     ./git.nix
     ./i3.nix

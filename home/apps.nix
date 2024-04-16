@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
+    calibre
     clash-verge
     keepassxc
     microsoft-edge

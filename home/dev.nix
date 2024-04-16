@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ devenv ];
+  home.packages = with pkgs; [
+    devenv
+    conda
+  ];
 }
