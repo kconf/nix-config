@@ -5,9 +5,12 @@
     clash-verge
     keepassxc
     microsoft-edge
+    microsoft-edge
+    obsidian
     obsidian
     quarto
     vscode
+    wpsoffice-cn
     wpsoffice-cn
     zeal
     zotero

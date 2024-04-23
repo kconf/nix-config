@@ -18,13 +18,6 @@
 
     windowManager.i3 = {
       enable = true;
-      extraPackages = with pkgs; [
-        i3lock
-        maim
-        xclip
-        xfce.thunar
-        i3wsr
-      ];
     };
 
     # Configure keymap in X11

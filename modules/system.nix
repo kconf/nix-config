@@ -5,6 +5,7 @@
   ...
 }:
 {
+  imports = [ ./setting.nix ];
   # ============================= User related =============================
   users.users.${user.name} = {
     isNormalUser = true;
@@ -17,22 +18,6 @@
     ];
   };
   environment.pathsToLink = [ "/share/zsh" ];
-
-  # customise /etc/nix/nix.conf declaratively via `nix.settings`
-  nix.settings = {
-    trusted-users = [ user.name ];
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    substituters = [
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      # "https://cache.nixos.org/"
-    ];
-
-    trusted-public-keys = [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
-    builders-use-substitutes = true;
-  };
 
   # do garbage collection weekly to keep disk usage low
   nix.gc = {
@@ -109,9 +94,6 @@
     curl
     git
   ];
-  programs.vim = {
-    defaultEditor = true;
-  };
 
   # Enable backlight
   programs.light.enable = true;

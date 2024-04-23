@@ -1,13 +1,7 @@
 {
-  description = "NixOS Flake";
+  description = "Nix Flakes";
 
   nixConfig = {
-    substituters = [
-      "https://mirror.sjtu.edu.cn/nix-channels/store"
-      #"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      "https://cache.nixos.org/"
-    ];
-
     # nix community's cache server
     extra-substituters = [ "https://nix-community.cachix.org" ];
     extra-trusted-public-keys = [
@@ -26,7 +20,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       home-manager,
       nur,
@@ -40,6 +33,10 @@
         email = "hanjianwei@gmail.com";
       };
       system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      allowUnfree = {
+        nixpkgs.config.allowUnfree = true;
+      };
       mkSystem =
         {
           host,
@@ -48,12 +45,14 @@
         nixpkgs.lib.nixosSystem {
           system = system;
 
-          specialArgs = {
-            inherit user;
-          };
           modules = [
             nur.hmModules.nur
             ./hosts/${host}
+            {
+              _module.args = {
+                inherit user;
+              };
+            }
 
             home-manager.nixosModules.home-manager
             {
@@ -76,6 +75,21 @@
           host = "mako";
           dpi = 192;
         };
+      };
+
+      homeConfigurations."${user.name}" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          allowUnfree
+          ./home/standalone.nix
+          {
+            _module.args = {
+              inherit user;
+              dpi = 192;
+            };
+          }
+        ];
       };
 
       formatter.${system} = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;

@@ -24,7 +24,7 @@
     settings = {
       allow_remote_control = "yes";
       listen_on = "unix:@kitty";
-      enable_layouts = "splits";
+      enabled_layouts = "splits";
     };
   };
 
@@ -39,7 +39,7 @@
     enable = true;
     config = {
       modifier = "Mod4";
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "/usr/bin/kitty";
       menu = ''"${pkgs.rofi}/bin/rofi -show combi -combi-modes window,run,ssh -modes combi"'';
       workspaceAutoBackAndForth = true;
       defaultWorkspace = "workspace number 1";
@@ -89,6 +89,14 @@
       ];
     };
   };
+
+  home.packages = with pkgs; [
+    i3lock
+    maim
+    xclip
+    xfce.thunar
+    i3wsr
+  ];
 
   xdg.configFile."i3wsr/config.toml".text = ''
     [icons]
