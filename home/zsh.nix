@@ -11,8 +11,8 @@
     shellAliases = {
       update = "sudo nixos-rebuild switch";
       g = "${pkgs.git}/bin/git";
-      v = "${pkgs.neovim}/bin/nvim";
-      n = "nnn -a";
+      e = "${pkgs.neovim}/bin/nvim";
+      f = "nnn -a";
     };
 
     initExtra = ''
