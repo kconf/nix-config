@@ -15,7 +15,6 @@
     zip
     unzip
 
-    mpv
     nsxiv
     zathura
   ];
