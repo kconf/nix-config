@@ -17,6 +17,8 @@
 
     nsxiv
     zathura
+
+    restic
   ];
 
   programs.vim = {
