@@ -23,9 +23,8 @@
       ".*.swp"
     ];
 
-    delta = {
-      enable = true;
-    };
+    lfs.enable = true;
+    delta.enable = true;
 
     aliases = {
       a = "add";
