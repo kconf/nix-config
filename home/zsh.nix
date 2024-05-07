@@ -12,6 +12,7 @@
       update = "sudo nixos-rebuild switch";
       g = "${pkgs.git}/bin/git";
       e = "${pkgs.neovim}/bin/nvim";
+      o = "xdg-open";
       f = "nnn -a";
     };
 
