@@ -39,9 +39,10 @@
     enable = true;
   };
 
-  programs.zoxide.enable = true;
-
+  programs.bat.enable = true;
   programs.ripgrep.enable = true;
+  programs.zellij.enable = true;
+  programs.zoxide.enable = true;
 
   programs.nnn = {
     enable = true;
@@ -73,10 +74,6 @@
       d = "~/Downloads/";
       D = "~/Documents/";
     };
-  };
-
-  programs.zellij = {
-    enable = true;
   };
 
   home.packages = [ pkgs.fd ];
