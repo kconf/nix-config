@@ -64,4 +64,6 @@
       };
     };
   };
+
+  programs.lazygit.enable = true;
 }
