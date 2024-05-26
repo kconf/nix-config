@@ -25,11 +25,6 @@
     '';
   };
 
-  programs.lsd = {
-    enable = true;
-    enableAliases = true;
-  };
-
   programs.fzf = {
     enable = true;
     changeDirWidgetCommand = "fd --type d";
@@ -39,6 +34,7 @@
     enable = true;
   };
 
+  programs.eza.enable = true;
   programs.bat.enable = true;
   programs.ripgrep.enable = true;
   programs.zellij.enable = true;
