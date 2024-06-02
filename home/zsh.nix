@@ -21,7 +21,9 @@
       qr() { curl qrenco.de/$* }
       clone() { gh repo clone $1 $HOME/src/github.com/$1 }
 
-      [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+      for f in $HOME/.zsh.d/*.sh(N); do
+        source $f
+      done
     '';
   };
 
