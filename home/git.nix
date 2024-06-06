@@ -7,6 +7,9 @@
     userEmail = user.email;
 
     extraConfig = {
+      core = {
+          quotepath = false;
+      };
       init = {
         defaultBranch = "main";
       };
