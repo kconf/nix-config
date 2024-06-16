@@ -9,8 +9,8 @@
       (pkgs.fetchFromGitHub {
         owner = "kconf";
         repo = "neovim";
-        rev = "v1.1";
-        sha256 = "sha256-GAAL4WjmcMiuzgAyftW4aX1lLhj3u13tMF+8gHAtojs=";
+        rev = "v1.2";
+        sha256 = "sha256-N/ACfnSYQ9pRsMpCB3uEglsEvsvtRiiLPbpAfx7MFr4=";
       })
       + "/.config/nvim";
     recursive = true;
