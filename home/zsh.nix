@@ -14,6 +14,7 @@
       e = "${pkgs.neovim}/bin/nvim";
       o = "xdg-open";
       f = "nnn -a";
+      rm = "trash";
     };
 
     initExtra = ''
