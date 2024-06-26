@@ -5,7 +5,6 @@
     clash-verge
     keepassxc
     microsoft-edge
-    microsoft-edge
     mpv
     obsidian
     obsidian
