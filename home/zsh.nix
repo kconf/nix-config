@@ -20,7 +20,7 @@
     initExtra = ''
       cht() { curl cht.sh/$* }
       qr() { curl qrenco.de/$* }
-      clone() { gh repo clone $1 $HOME/src/github.com/$1 }
+      clone() { gh repo clone $1 $HOME/Dev/github.com/$1 }
 
       for f in $HOME/.zsh.d/*.sh(N); do
         source $f
